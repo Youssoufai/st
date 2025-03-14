@@ -7,7 +7,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white shadow-md fixed w-full top-0 z-50 px-4 md:px-10 lg:px-20">
+        <nav className="bg-white shadow-md fixed w-full top-0 z-50 px-8 md:px-12 py-3 lg:px-20">
             <div className="flex items-center justify-between py-4">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
@@ -25,12 +25,6 @@ const Navbar = () => {
                 </ul>
 
                 {/* Contact Button */}
-                <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    className="hidden md:block bg-teal-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-teal-600"
-                >
-                    Contact Us
-                </motion.button>
 
                 {/* Mobile Menu Button */}
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -53,9 +47,6 @@ const Navbar = () => {
                         <li className="cursor-pointer">Projects</li>
                         <li className="cursor-pointer">News & Updates</li>
                     </ul>
-                    <button className="bg-teal-500 text-white w-full py-2 rounded-lg shadow-md hover:bg-teal-600">
-                        Contact Us
-                    </button>
                 </motion.div>
             )}
         </nav>
