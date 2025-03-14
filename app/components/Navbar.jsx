@@ -1,11 +1,65 @@
-import React from 'react'
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <>
+        <nav className="bg-white shadow-md fixed w-full top-0 z-50 px-4 md:px-10 lg:px-20">
+            <div className="flex items-center justify-between py-4">
+                {/* Logo */}
+                <div className="flex items-center gap-2">
+                    <img src="/coa.webp" alt="Logo" className="h-10" />
+                    <span className="text-green-800 font-bold text-lg">ABBA KABADE</span>
+                </div>
 
-        </>
-    )
-}
+                {/* Desktop Menu */}
+                <ul className="hidden md:flex space-x-6 text-gray-600 font-medium">
+                    <motion.li whileHover={{ scale: 1.1 }} className="text-green-700 cursor-pointer">Home</motion.li>
+                    <motion.li whileHover={{ scale: 1.1 }} className="cursor-pointer">About</motion.li>
+                    <motion.li whileHover={{ scale: 1.1 }} className="cursor-pointer">Gallery</motion.li>
+                    <motion.li whileHover={{ scale: 1.1 }} className="cursor-pointer">News & Updates</motion.li>
+                    <motion.li whileHover={{ scale: 1.1 }} className="cursor-pointer">Blog</motion.li>
+                </ul>
 
-export default Navbar
+                {/* Contact Button */}
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    className="hidden md:block bg-teal-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-teal-600"
+                >
+                    Contact Us
+                </motion.button>
+
+                {/* Mobile Menu Button */}
+                <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
+            </div>
+
+            {/* Mobile Menu */}
+            {isOpen && (
+                <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="md:hidden bg-white shadow-md p-4 space-y-4"
+                >
+                    <ul className="flex flex-col space-y-4 text-gray-600 font-medium">
+                        <li className="text-green-700 cursor-pointer">Home</li>
+                        <li className="cursor-pointer">About</li>
+                        <li className="cursor-pointer">Legislative Affairs</li>
+                        <li className="cursor-pointer">Projects</li>
+                        <li className="cursor-pointer">News & Updates</li>
+                    </ul>
+                    <button className="bg-teal-500 text-white w-full py-2 rounded-lg shadow-md hover:bg-teal-600">
+                        Contact Us
+                    </button>
+                </motion.div>
+            )}
+        </nav>
+    );
+};
+
+export default Navbar;
