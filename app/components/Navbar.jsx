@@ -43,9 +43,9 @@ const Navbar = () => {
                     <ul className="flex flex-col space-y-4 text-gray-600 font-medium">
                         <li className="text-green-700 cursor-pointer">Home</li>
                         <li className="cursor-pointer">About</li>
-                        <li className="cursor-pointer">Legislative Affairs</li>
-                        <li className="cursor-pointer">Projects</li>
+                        <li className="cursor-pointer">Gallery</li>
                         <li className="cursor-pointer">News & Updates</li>
+                        <li className="cursor-pointer">Blogs</li>
                     </ul>
                 </motion.div>
             )}
