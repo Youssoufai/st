@@ -7,7 +7,7 @@ const newsData = [
         id: 1,
         title: "Empowerment: I was honored to attend the massive empowerment program organized by Hon. Umar Shehu Ajilo...",
         date: "March 8, 2025",
-        description: "Conference of Speakers at Pan-African Parliament (PAP) under the African Union (AU) has...",
+        description: "I was honore to attend the massive empowerment program organized by Hon.Umar Shehu Ajilo...",
         image: "/emp.jpg",
     },
     {
