@@ -38,7 +38,7 @@ const Hero = () => {
                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                         transition={{ delay: 0.5, duration: 1 }}
                     >
-                        Muhammad <span className="text-green-500">Kabade</span> Suleiman
+                        SEYI <span className="text-green-500">TINUBU</span>
                     </motion.h1>
 
                     <motion.p
@@ -47,7 +47,7 @@ const Hero = () => {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ delay: 0.7, duration: 1 }}
                     >
-                        National Youth Leader of The PDP <span className="font-bold">(MON)</span>
+                        Father || Serial Entrepreneur || Philanthropist
                     </motion.p>
                 </motion.div>
             </section>
